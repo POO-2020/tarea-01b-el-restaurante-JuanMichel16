@@ -15,7 +15,7 @@ class Main {
         this.nuevoProducto = new Producto("PIZZA MEXICANA", this.precioNuevo)
         this.nuevoPedido = new ElementoPedido(this.nuevoProducto,3)
         this.nuevoDomicilio = new Direccion("Pocajontas", 18, 18, "Centro", 28750, "Colima", "Minatitlan")
-        this.nuevoCliente = new Cliente ("Juan Michel", this.nuevoDomicilio.getFormatoLargo(), 145456452432)
+        this.nuevoCliente = new Cliente ("Juan Michel", this.nuevoDomicilio.getFormatoCorto(), 145456452432)
     }
 
 probarFecha() {
