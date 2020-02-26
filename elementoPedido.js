@@ -4,8 +4,8 @@ export default class ElementoPedido {
 
 /**
  * 
- * @param {String} nombre 
- * @param {Number} precio 
+ * @param {String} producto 
+ * @param {Number} cantidad
  */
     constructor(producto, cantidad) {
         this.productos = producto
