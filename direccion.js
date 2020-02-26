@@ -23,7 +23,7 @@ export default class Direccion {
 
 
 getFormatoCorto() {
-    return ` ${this.calles} ${this.NumerosExterior}`
+    return `${this.calles} ${this.NumerosExterior}`
 }
 
 getFormatoLargo() {

@@ -13,6 +13,7 @@ export default class ElementoPedido {
     }
 
 getDescripcion() {
+    console.log("asjdjkadsjkasd");
     return `${this.cantidades} x ${this.productos.nombres} = ${this.productos.precios.valores*this.cantidades}`
     }
 

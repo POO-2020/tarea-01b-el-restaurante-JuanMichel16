@@ -7,7 +7,7 @@ export default class Fecha {
      * @param {number} año 
      */
     constructor(dia, mes, año) {
-        this.fechas = new Date (dia, mes, año)
+        this.fechas = new Date (año, mes, dia)
         this.dias = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"]
         this.meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
     }
@@ -20,25 +20,25 @@ getAños() {
 
 getMeses() {
     let mesesCumplidos
-    mesesCumplidos = getAños() * 12
+    mesesCumplidos = this.getAños() * 12
     return `${mesesCumplidos}`
 }
 
 getSemanas() {
     let semanasCumplidas
-    semanasCumplidas = getMeses() * 4
+    semanasCumplidas = this.getMeses() * 4
     return `${semanasCumplidas}`
 }
 
 getDias() {
     let diasCumplidos
-    diasCumplidos = getSemanas() * 7
+    diasCumplidos = this.getSemanas() * 7
     return ` ${diasCumplidos} `
 }
 
 getFecha() {
     let mesDelAño = this.meses[this.fechas.getMonth()]
-    return `${this.fechas.getdate()} / ${mesDelAño} / ${this.fechas.getFullYear()}`
+    return `${this.fechas.getDate()} / ${mesDelAño} / ${this.fechas.getFullYear()}`
 }
 
 getDiaFecha() {
