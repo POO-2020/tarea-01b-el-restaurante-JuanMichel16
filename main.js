@@ -4,6 +4,7 @@ import Precio from "./precio.js"
 import Producto from "./producto.js"
 import ElementoPedido from "./elementoPedido.js"
 import Direccion from "./direccion.js"
+import Cliente from "./cliente.js"
 
 class Main {
 
@@ -14,6 +15,7 @@ class Main {
         this.nuevoProducto = new Producto("PIZZA MEXICANA", this.precioNuevo)
         this.nuevoPedido = new ElementoPedido(this.nuevoProducto,3)
         this.nuevoDomicilio = new Direccion("Pocajontas", 18, 18, "Centro", 28750, "Colima", "Minatitlan")
+        this.nuevoCliente = new Cliente ("Juan Michel", this.nuevoDomicilio.getFormatoLargo(), 145456452432)
     }
 
 probarFecha() {
@@ -36,9 +38,14 @@ ProbarDireccion() {
     console.log(`${this.nuevoDomicilio.getFormatoCorto()}`)
     console.log(`${this.nuevoDomicilio.getFormatoLargo()}`)
 }
+
+probarCliente() {
+    console.log(`${this.nuevoCliente.getPerfil()}`)
+}
 }
 let app = new Main()
 app.probarPrecio()
 app.probarProducto()
 app.probarPedido()
 app.ProbarDireccion()
+app.probarCliente()
