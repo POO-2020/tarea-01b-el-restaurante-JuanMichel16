@@ -10,6 +10,6 @@ export default class Precio {
     }
 
 getPrecio() {
-    return `El precio es ${Number(this.valores)}`
+    return ` $${Number(this.valores)}`
 }
 }
